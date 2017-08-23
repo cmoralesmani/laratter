@@ -19,3 +19,5 @@ Route::post('/messages/create','MessagesController@create')
 ->middleware('auth');
 // /messages/34
 Auth::routes();
+
+Route::get('/{username}','UsersController@show');
