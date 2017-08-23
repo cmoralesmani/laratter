@@ -17,3 +17,4 @@ Route::get('/messages/{message}', 'MessagesController@show');
 
 Route::post('/messages/create','MessagesController@create');
 // /messages/34
+Auth::routes();
