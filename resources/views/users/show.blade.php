@@ -12,6 +12,12 @@
     </a>  --}}
 
     @if(Auth::check())
+        <form action="/{{ $user->username }}/dms" method="post">
+            <input type="text" name="message" class="form-control" />
+            <button type="submit" class="btn btn-success">
+                Enviar DM
+            </button>
+        </form>
         @if(Auth::user()->isFollowing($user))
             <form action="/{{ $user->username }}/unfollow" method="post">
                 {{ csrf_field() }}
