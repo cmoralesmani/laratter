@@ -14,6 +14,7 @@
 Route::get('/', 'PagesController@home');
 
 Route::get('/messages/{message}', 'MessagesController@show');
+Route::get('/locale','PagesController@locale');
 
 // /messages/34
 Auth::routes();
